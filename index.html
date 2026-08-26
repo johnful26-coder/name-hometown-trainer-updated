@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Name & Hometown Trainer</title>
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f7fb;color:#172033}
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 60px}
+.card{background:#fff;border:1px solid #dfe5ee;border-radius:16px;padding:20px;margin:14px 0;box-shadow:0 4px 14px rgba(0,0,0,.04)}
+h1{margin:0 0 6px} .sub,.small{color:#687386} .small{font-size:13px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button,select,input{font:inherit}
+button{border:0;border-radius:10px;padding:11px 15px;font-weight:bold;cursor:pointer}
+.primary{background:#3157d5;color:white} .secondary{background:#e9edf7;color:#26324b} .ghost{background:white;border:1px solid #ccd4df}
+select,input{border:1px solid #cbd3df;border-radius:10px;padding:11px;background:#fff}
+input[type=text]{width:100%;box-sizing:border-box}
+.hidden{display:none!important}
+.big{font-size:44px;font-weight:900} .clue{font-size:24px;font-weight:bold;margin:8px 0 14px}
+.feedback{padding:11px;margin-top:10px;border-radius:10px;font-weight:bold}
+.ok{background:#eaf7ef;color:#197a45} .bad{background:#fff0ef;color:#b42318}
+.progress{height:9px;background:#e8edf5;border-radius:99px;overflow:hidden;margin:10px 0} .bar{height:100%;background:#3157d5;width:0}
+.statebuttons{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px} .statepick{background:#eef2ff;color:#2642a1}
+.review{border-top:1px solid #e3e7ee;padding:8px 0}
+.notice{background:#fff7df;color:#7a5200;padding:12px;border-radius:10px;margin-top:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Name & Hometown Trainer</h1>
+<p class="sub">Practice one state at a time. Exact spelling is required; capitalization and extra spaces are ignored.</p>
+
+<div class="card" id="chooserCard">
+<div class="row">
+<label><b>Choose state:</b>
+<select id="stateSelect">
+<option value="CA">California (CA) — 2</option>
+<option value="CO">Colorado (CO) — 2</option>
+<option value="CT">Connecticut (CT) — 1</option>
+<option value="DE">Delaware (DE) — 1</option>
+<option value="FL">Florida (FL) — 2</option>
+<option value="GA">Georgia (GA) — 2</option>
+<option value="IL">Illinois (IL) — 5</option>
+<option value="IN">Indiana (IN) — 1</option>
+<option value="MD">Maryland (MD) — 3</option>
+<option value="MI">Michigan (MI) — 1</option>
+<option value="NJ">New Jersey (NJ) — 6</option>
+<option value="NY">New York (NY) — 13</option>
+<option value="NC">North Carolina (NC) — 5</option>
+<option value="OH">Ohio (OH) — 1</option>
+<option value="OR">Oregon (OR) — 1</option>
+<option value="PA">Pennsylvania (PA) — 3</option>
+<option value="TN">Tennessee (TN) — 7</option>
+<option value="TX">Texas (TX) — 3</option>
+<option value="VA">Virginia (VA) — 2</option>
+<option value="WI">Wisconsin (WI) — 1</option>
+</select>
+</label>
+<button id="startBtn" class="primary" type="button">Start State</button>
+<button id="randomBtn" class="secondary" type="button">Random State</button>
+</div>
+<div class="statebuttons"><button class="statepick" data-abbr="CA" type="button">CA · 2</button>
+<button class="statepick" data-abbr="CO" type="button">CO · 2</button>
+<button class="statepick" data-abbr="CT" type="button">CT · 1</button>
+<button class="statepick" data-abbr="DE" type="button">DE · 1</button>
+<button class="statepick" data-abbr="FL" type="button">FL · 2</button>
+<button class="statepick" data-abbr="GA" type="button">GA · 2</button>
+<button class="statepick" data-abbr="IL" type="button">IL · 5</button>
+<button class="statepick" data-abbr="IN" type="button">IN · 1</button>
+<button class="statepick" data-abbr="MD" type="button">MD · 3</button>
+<button class="statepick" data-abbr="MI" type="button">MI · 1</button>
+<button class="statepick" data-abbr="NJ" type="button">NJ · 6</button>
+<button class="statepick" data-abbr="NY" type="button">NY · 13</button>
+<button class="statepick" data-abbr="NC" type="button">NC · 5</button>
+<button class="statepick" data-abbr="OH" type="button">OH · 1</button>
+<button class="statepick" data-abbr="OR" type="button">OR · 1</button>
+<button class="statepick" data-abbr="PA" type="button">PA · 3</button>
+<button class="statepick" data-abbr="TN" type="button">TN · 7</button>
+<button class="statepick" data-abbr="TX" type="button">TX · 3</button>
+<button class="statepick" data-abbr="VA" type="button">VA · 2</button>
+<button class="statepick" data-abbr="WI" type="button">WI · 1</button></div>
+<div id="scriptWarning" class="notice">
+If these buttons do not respond, you are viewing the file inside a preview that blocks JavaScript. Download the ZIP, unzip it, and double-click <b>index.html</b>.
+</div>
+</div>
+
+<div id="quiz" class="hidden">
+<div class="card">
+<div id="abbr" class="big"></div><div id="stateName" class="sub"></div>
+<h3>How many people are from this state?</h3>
+<div class="row"><input id="countInput" type="number" min="0" style="width:100px"><button id="countBtn" class="primary">Check</button></div>
+<div id="countFeedback"></div>
+</div>
+
+<div id="recallCard" class="card hidden">
+<div class="small" id="recallCounter"></div>
+<div class="progress"><div id="recallBar" class="bar"></div></div>
+<div class="clue">Type: full name, then a space, then hometown</div>
+<p class="small">Example format: <b>Wallace Lloyd Keeler Memphis</b></p>
+<input id="recallInput" type="text" autocomplete="off" spellcheck="false" placeholder="First Middle Last Hometown">
+<div class="row" style="margin-top:10px">
+  <button id="recallBtn" class="primary">Check</button>
+</div>
+<div id="recallFeedback"></div>
+<div id="enteredList" style="margin-top:12px"></div>
+</div>
+
+<div id="doneCard" class="card hidden">
+<h2 id="doneTitle"></h2><div id="score"></div><div id="missedList"></div>
+<div class="row" style="margin-top:12px"><button id="againBtn" class="primary">Practice Again</button><button id="newStateBtn" class="secondary">Choose Another State</button></div>
+</div>
+</div>
+
+<div class="card" id="studyCard"><details><summary><b>Study list / spelling reference</b></summary><div id="studyList"></div></details></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
