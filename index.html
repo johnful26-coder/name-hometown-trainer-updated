@@ -23,6 +23,11 @@ input[type=text]{width:100%;box-sizing:border-box}
 .statebuttons{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px} .statepick{background:#eef2ff;color:#2642a1}
 .review{border-top:1px solid #e3e7ee;padding:8px 0}
 .notice{background:#fff7df;color:#7a5200;padding:12px;border-radius:10px;margin-top:12px}
+.mcgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+.mcchoice{background:#eef2ff;color:#2642a1;border:1px solid #d7def5;text-align:left}
+.mcchoice.correct{background:#eaf7ef;color:#197a45;border-color:#b9dfc8}
+.mcchoice.wrong{background:#fff0ef;color:#b42318;border-color:#efc2bd}
+@media(max-width:650px){.mcgrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -34,50 +39,50 @@ input[type=text]{width:100%;box-sizing:border-box}
 <div class="row">
 <label><b>Choose state:</b>
 <select id="stateSelect">
+<option value="NY">New York (NY) — 13</option>
+<option value="TN">Tennessee (TN) — 6</option>
+<option value="NJ">New Jersey (NJ) — 6</option>
+<option value="IL">Illinois (IL) — 5</option>
+<option value="NC">North Carolina (NC) — 5</option>
+<option value="MD">Maryland (MD) — 3</option>
+<option value="PA">Pennsylvania (PA) — 3</option>
+<option value="TX">Texas (TX) — 3</option>
 <option value="CA">California (CA) — 2</option>
 <option value="CO">Colorado (CO) — 2</option>
-<option value="CT">Connecticut (CT) — 1</option>
-<option value="DE">Delaware (DE) — 1</option>
 <option value="FL">Florida (FL) — 2</option>
 <option value="GA">Georgia (GA) — 2</option>
-<option value="IL">Illinois (IL) — 5</option>
+<option value="VA">Virginia (VA) — 2</option>
+<option value="CT">Connecticut (CT) — 1</option>
+<option value="DE">Delaware (DE) — 1</option>
 <option value="IN">Indiana (IN) — 1</option>
-<option value="MD">Maryland (MD) — 3</option>
 <option value="MI">Michigan (MI) — 1</option>
-<option value="NJ">New Jersey (NJ) — 6</option>
-<option value="NY">New York (NY) — 13</option>
-<option value="NC">North Carolina (NC) — 5</option>
 <option value="OH">Ohio (OH) — 1</option>
 <option value="OR">Oregon (OR) — 1</option>
-<option value="PA">Pennsylvania (PA) — 3</option>
-<option value="TN">Tennessee (TN) — 6</option>
-<option value="TX">Texas (TX) — 3</option>
-<option value="VA">Virginia (VA) — 2</option>
 <option value="WI">Wisconsin (WI) — 1</option>
 </select>
 </label>
 <button id="startBtn" class="primary" type="button">Start State</button>
 <button id="randomBtn" class="secondary" type="button">Random State</button>
 </div>
-<div class="statebuttons"><button class="statepick" data-abbr="CA" type="button">CA · 2</button>
+<div class="statebuttons"><button class="statepick" data-abbr="NY" type="button">NY · 13</button>
+<button class="statepick" data-abbr="TN" type="button">TN · 6</button>
+<button class="statepick" data-abbr="NJ" type="button">NJ · 6</button>
+<button class="statepick" data-abbr="IL" type="button">IL · 5</button>
+<button class="statepick" data-abbr="NC" type="button">NC · 5</button>
+<button class="statepick" data-abbr="MD" type="button">MD · 3</button>
+<button class="statepick" data-abbr="PA" type="button">PA · 3</button>
+<button class="statepick" data-abbr="TX" type="button">TX · 3</button>
+<button class="statepick" data-abbr="CA" type="button">CA · 2</button>
 <button class="statepick" data-abbr="CO" type="button">CO · 2</button>
-<button class="statepick" data-abbr="CT" type="button">CT · 1</button>
-<button class="statepick" data-abbr="DE" type="button">DE · 1</button>
 <button class="statepick" data-abbr="FL" type="button">FL · 2</button>
 <button class="statepick" data-abbr="GA" type="button">GA · 2</button>
-<button class="statepick" data-abbr="IL" type="button">IL · 5</button>
+<button class="statepick" data-abbr="VA" type="button">VA · 2</button>
+<button class="statepick" data-abbr="CT" type="button">CT · 1</button>
+<button class="statepick" data-abbr="DE" type="button">DE · 1</button>
 <button class="statepick" data-abbr="IN" type="button">IN · 1</button>
-<button class="statepick" data-abbr="MD" type="button">MD · 3</button>
 <button class="statepick" data-abbr="MI" type="button">MI · 1</button>
-<button class="statepick" data-abbr="NJ" type="button">NJ · 6</button>
-<button class="statepick" data-abbr="NY" type="button">NY · 13</button>
-<button class="statepick" data-abbr="NC" type="button">NC · 5</button>
 <button class="statepick" data-abbr="OH" type="button">OH · 1</button>
 <button class="statepick" data-abbr="OR" type="button">OR · 1</button>
-<button class="statepick" data-abbr="PA" type="button">PA · 3</button>
-<button class="statepick" data-abbr="TN" type="button">TN · 6</button>
-<button class="statepick" data-abbr="TX" type="button">TX · 3</button>
-<button class="statepick" data-abbr="VA" type="button">VA · 2</button>
 <button class="statepick" data-abbr="WI" type="button">WI · 1</button></div>
 <div id="scriptWarning" class="notice">
 If these buttons do not respond, you are viewing the file inside a preview that blocks JavaScript. Download the ZIP, unzip it, and double-click <b>index.html</b>.
@@ -109,6 +114,32 @@ If these buttons do not respond, you are viewing the file inside a preview that 
 <h2 id="doneTitle"></h2><div id="score"></div><div id="missedList"></div>
 <div class="row" style="margin-top:12px"><button id="againBtn" class="primary">Practice Again</button><button id="newStateBtn" class="secondary">Choose Another State</button></div>
 </div>
+</div>
+
+
+<div class="card" id="mcCard">
+  <h2>Multiple-Choice Practice</h2>
+  <p class="sub">Random-name drills. Practice the state and hometown separately.</p>
+
+  <div class="card" style="margin:12px 0">
+    <div class="small">Name → State</div>
+    <div id="mcStateName" class="clue"></div>
+    <div id="mcStateChoices" class="mcgrid"></div>
+    <div id="mcStateFeedback"></div>
+    <div class="row" style="margin-top:10px">
+      <button id="mcStateNext" class="secondary" type="button">Next Random Name</button>
+    </div>
+  </div>
+
+  <div class="card" style="margin:12px 0 0">
+    <div class="small">Name → Hometown</div>
+    <div id="mcCityName" class="clue"></div>
+    <div id="mcCityChoices" class="mcgrid"></div>
+    <div id="mcCityFeedback"></div>
+    <div class="row" style="margin-top:10px">
+      <button id="mcCityNext" class="secondary" type="button">Next Random Name</button>
+    </div>
+  </div>
 </div>
 
 <div class="card" id="studyCard"><details><summary><b>Study list / spelling reference</b></summary><div id="studyList"></div></details></div>
