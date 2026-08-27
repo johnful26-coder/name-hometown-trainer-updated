@@ -1,11 +1,14 @@
-var PEOPLE = [{"abbr": "NY", "state": "New York", "name": "Tyler Joseph Callahan", "city": "Long Island"}, {"abbr": "NY", "state": "New York", "name": "Joseph Stephen Carapazza", "city": "Long Island"}, {"abbr": "NY", "state": "New York", "name": "Jason William Geier", "city": "Long Island"}, {"abbr": "NY", "state": "New York", "name": "Sean Patrick O'Connell", "city": "Long Island"}, {"abbr": "NY", "state": "New York", "name": "Luca Peregrin Mele", "city": "Pelham"}, {"abbr": "NY", "state": "New York", "name": "Drew Thomas Retmanski", "city": "Long Island"}, {"abbr": "NY", "state": "New York", "name": "William David Wagner", "city": "Rockland"}, {"abbr": "NY", "state": "New York", "name": "Matthew Thomas Purvis", "city": "Rockland"}, {"abbr": "NY", "state": "New York", "name": "Erik Matthew Garpestad", "city": "Staten Island"}, {"abbr": "NY", "state": "New York", "name": "Quinn Adam Carpenter", "city": "Westchester"}, {"abbr": "NY", "state": "New York", "name": "Aidan James Curtis", "city": "Westchester"}, {"abbr": "NY", "state": "New York", "name": "Patrick Ryan Kusic", "city": "Yonkers"}, {"abbr": "NY", "state": "New York", "name": "Cian O'Flynn", "city": "Yonkers"}, {"abbr": "TN", "state": "Tennessee", "name": "Andrew James Lamb", "city": "Johnson City"}, {"abbr": "TN", "state": "Tennessee", "name": "Michael Paris DeMarchis", "city": "Knoxville"}, {"abbr": "TN", "state": "Tennessee", "name": "Hamilton Russell Martin", "city": "Knoxville"}, {"abbr": "TN", "state": "Tennessee", "name": "Nathan Howard Wilder", "city": "Memphis"}, {"abbr": "TN", "state": "Tennessee", "name": "Gabriel Night Risner", "city": "Pulaski"}, {"abbr": "TN", "state": "Tennessee", "name": "Wallace Lloyd Keeler", "city": "Memphis"}, {"abbr": "NJ", "state": "New Jersey", "name": "Neil Mathur", "city": "Holmdel"}, {"abbr": "NJ", "state": "New Jersey", "name": "Max Danger De Angelis", "city": "Middletown"}, {"abbr": "NJ", "state": "New Jersey", "name": "Sean Joseph Dunn", "city": "Middletown"}, {"abbr": "NJ", "state": "New Jersey", "name": "Josh Lewis Loudon", "city": "Verona"}, {"abbr": "NJ", "state": "New Jersey", "name": "Reed Emerson Rachinsky", "city": "Middletown"}, {"abbr": "NJ", "state": "New Jersey", "name": "Liam Francis Cozza", "city": "Woodcliff Lake"}, {"abbr": "IL", "state": "Illinois", "name": "Andrew (Drew) Bryan Christophersen", "city": "Chicago"}, {"abbr": "IL", "state": "Illinois", "name": "Manny (Emmanuel) Robert Girolamo", "city": "Chicago"}, {"abbr": "IL", "state": "Illinois", "name": "Austin George Grzywa", "city": "Chicago"}, {"abbr": "IL", "state": "Illinois", "name": "Guy Thomas Bucciferro", "city": "Rockford"}, {"abbr": "IL", "state": "Illinois", "name": "Miles Daniel Moloney", "city": "Washington"}, {"abbr": "NC", "state": "North Carolina", "name": "Jackson Brian Gasiorowski", "city": "Charlotte"}, {"abbr": "NC", "state": "North Carolina", "name": "Jack Preston Rand", "city": "Durham"}, {"abbr": "NC", "state": "North Carolina", "name": "Matthew Allen Fisher", "city": "Pinehurst"}, {"abbr": "NC", "state": "North Carolina", "name": "Connor Matthew Rausch", "city": "Raleigh"}, {"abbr": "NC", "state": "North Carolina", "name": "Hudson James Huffman", "city": "Wilmington"}, {"abbr": "MD", "state": "Maryland", "name": "David Fernando Cortez", "city": "Potomac"}, {"abbr": "MD", "state": "Maryland", "name": "Cash Thomas Levenberg", "city": "Potomac"}, {"abbr": "MD", "state": "Maryland", "name": "Lucas Schoenenkorb Kanarek", "city": "Rockville"}, {"abbr": "PA", "state": "Pennsylvania", "name": "Winston Thomas Hornik", "city": "Easton"}, {"abbr": "PA", "state": "Pennsylvania", "name": "Ryan Patrick Friel", "city": "Philadelphia"}, {"abbr": "PA", "state": "Pennsylvania", "name": "Josh Carter Rakowski", "city": "Philadelphia"}, {"abbr": "TX", "state": "Texas", "name": "Cameron Neal Prince", "city": "Dallas"}, {"abbr": "TX", "state": "Texas", "name": "John Keller Fulghum", "city": "Fort Worth"}, {"abbr": "TX", "state": "Texas", "name": "Lucas Michael Hamilton", "city": "Fort Worth"}, {"abbr": "VA", "state": "Virginia", "name": "Matthew Zachary Lynch", "city": "Chantilly"}, {"abbr": "VA", "state": "Virginia", "name": "George Herbert Wotka", "city": "Falls Church"}, {"abbr": "CA", "state": "California", "name": "Maximos John Lianides", "city": "Danville"}, {"abbr": "CA", "state": "California", "name": "Chase Elijah Persell", "city": "Hermosa Beach"}, {"abbr": "CO", "state": "Colorado", "name": "Cole Davis Boonstra", "city": "Broomfield"}, {"abbr": "CO", "state": "Colorado", "name": "Jordan Evan Abramson", "city": "Denver"}, {"abbr": "FL", "state": "Florida", "name": "Cole Franklin Bowen", "city": "Sarasota"}, {"abbr": "FL", "state": "Florida", "name": "Nate Micucci Rainis", "city": "Stuart"}, {"abbr": "CT", "state": "Connecticut", "name": "Joseph Ralph Luberti", "city": "Woodbridge"}, {"abbr": "DE", "state": "Delaware", "name": "Quinn Joseph Naughter", "city": "Wilmington"}, {"abbr": "GA", "state": "Georgia", "name": "Ben William Ille", "city": "Atlanta"}, {"abbr": "IN", "state": "Indiana", "name": "Charlie Douglas Biggs", "city": "Fort Wayne"}, {"abbr": "MI", "state": "Michigan", "name": "Nicholas Christopher Gabrys", "city": "Detroit"}, {"abbr": "OH", "state": "Ohio", "name": "Luke Anthony Brinck", "city": "Cincinnati"}, {"abbr": "OR", "state": "Oregon", "name": "Jaxen Scott Mazur", "city": "Eugene"}, {"abbr": "WI", "state": "Wisconsin", "name": "Jackson Vick Speed", "city": "Milwaukee"}, {"abbr": "GA", "state": "Georgia", "name": "William David Smith", "city": "Atlanta"}];
+var PEOPLE = [{"abbr": "NY", "state": "New York", "name": "Drew Thomas Newmanski", "city": "Long Island"}, {"abbr": "NY", "state": "New York", "name": "Jason William Geier", "city": "Long Island"}, {"abbr": "NY", "state": "New York", "name": "Joseph Stephen Carapazza", "city": "Long Island"}, {"abbr": "NY", "state": "New York", "name": "Sean Patrick O'Connell", "city": "Long Island"}, {"abbr": "NY", "state": "New York", "name": "Tyler Joseph Callahan", "city": "Long Island"}, {"abbr": "NY", "state": "New York", "name": "Luca Peregrin Mele", "city": "Pelham"}, {"abbr": "NY", "state": "New York", "name": "Matthew Thomas Purvis", "city": "Rockland"}, {"abbr": "NY", "state": "New York", "name": "William David Wagner", "city": "Rockland"}, {"abbr": "NY", "state": "New York", "name": "Erik Matthew Garpestad", "city": "Staten Island"}, {"abbr": "NY", "state": "New York", "name": "Aidan James Curtis", "city": "Westchester"}, {"abbr": "NY", "state": "New York", "name": "Quinn Adam Carpenter", "city": "Westchester"}, {"abbr": "NY", "state": "New York", "name": "Cian O'Flynn", "city": "Yonkers"}, {"abbr": "NY", "state": "New York", "name": "Patrick Ryan Kusic", "city": "Yonkers"}, {"abbr": "NJ", "state": "New Jersey", "name": "Neil Mathur", "city": "Holmdel"}, {"abbr": "NJ", "state": "New Jersey", "name": "Max Danger De Angelis", "city": "Middletown"}, {"abbr": "NJ", "state": "New Jersey", "name": "Reed Emerson Rachinsky", "city": "Middletown"}, {"abbr": "NJ", "state": "New Jersey", "name": "Sean Joseph Dunn", "city": "Middletown"}, {"abbr": "NJ", "state": "New Jersey", "name": "Josh Lewis Loudon", "city": "Verona"}, {"abbr": "NJ", "state": "New Jersey", "name": "Liam Francis Cozza", "city": "Woodcliff Lake"}, {"abbr": "TN", "state": "Tennessee", "name": "Andrew James Lamb", "city": "Johnson City"}, {"abbr": "TN", "state": "Tennessee", "name": "Hamilton Russell Martin", "city": "Knoxville"}, {"abbr": "TN", "state": "Tennessee", "name": "Michael Paris DeMarchis", "city": "Knoxville"}, {"abbr": "TN", "state": "Tennessee", "name": "Nathan Howard Wilder", "city": "Memphis"}, {"abbr": "TN", "state": "Tennessee", "name": "Wallace Lloyd Keeler", "city": "Memphis"}, {"abbr": "TN", "state": "Tennessee", "name": "Gabriel Night Risner", "city": "Pulaski"}, {"abbr": "IL", "state": "Illinois", "name": "Andrew (Drew) Bryan Christophersen", "city": "Chicago"}, {"abbr": "IL", "state": "Illinois", "name": "Austin George Grzywa", "city": "Chicago"}, {"abbr": "IL", "state": "Illinois", "name": "Manny (Emmanuel) Robert Girolamo", "city": "Chicago"}, {"abbr": "IL", "state": "Illinois", "name": "Guy Thomas Bucciferro", "city": "Rockford"}, {"abbr": "IL", "state": "Illinois", "name": "Miles Daniel Moloney", "city": "Washington"}, {"abbr": "NC", "state": "North Carolina", "name": "Jackson Brian Gasiorowski", "city": "Charlotte"}, {"abbr": "NC", "state": "North Carolina", "name": "Jack Preston Rand", "city": "Durham"}, {"abbr": "NC", "state": "North Carolina", "name": "Matthew Allen Fisher", "city": "Pinehurst"}, {"abbr": "NC", "state": "North Carolina", "name": "Connor Matthew Rausch", "city": "Raleigh"}, {"abbr": "NC", "state": "North Carolina", "name": "Hudson James Huffman", "city": "Wilmington"}, {"abbr": "MD", "state": "Maryland", "name": "Cash Thomas Levenberg", "city": "Potomac"}, {"abbr": "MD", "state": "Maryland", "name": "David Fernando Cortez", "city": "Potomac"}, {"abbr": "MD", "state": "Maryland", "name": "Lucas Schoenenkorb Kanarek", "city": "Rockville"}, {"abbr": "PA", "state": "Pennsylvania", "name": "Winston Thomas Hornik", "city": "Easton"}, {"abbr": "PA", "state": "Pennsylvania", "name": "Josh Carter Rakowski", "city": "Philadelphia"}, {"abbr": "PA", "state": "Pennsylvania", "name": "Ryan Patrick Friel", "city": "Philadelphia"}, {"abbr": "TX", "state": "Texas", "name": "Cameron Neal Prince", "city": "Dallas"}, {"abbr": "TX", "state": "Texas", "name": "John Keller Fulghum", "city": "Fort Worth"}, {"abbr": "TX", "state": "Texas", "name": "Lucas Michael Hamilton", "city": "Fort Worth"}, {"abbr": "CA", "state": "California", "name": "Maximos John Lianides", "city": "Danville"}, {"abbr": "CA", "state": "California", "name": "Chase Elijah Persell", "city": "Hermosa Beach"}, {"abbr": "CO", "state": "Colorado", "name": "Cole Davis Boonstra", "city": "Broomfield"}, {"abbr": "CO", "state": "Colorado", "name": "Jordan Evan Abramson", "city": "Denver"}, {"abbr": "FL", "state": "Florida", "name": "Cole Franklin Bowen", "city": "Sarasota"}, {"abbr": "FL", "state": "Florida", "name": "Nate Micucci Rainis", "city": "Stuart"}, {"abbr": "GA", "state": "Georgia", "name": "Ben William Ille", "city": "Atlanta"}, {"abbr": "GA", "state": "Georgia", "name": "William David Smith", "city": "Atlanta"}, {"abbr": "VA", "state": "Virginia", "name": "Matthew Zachary Lynch", "city": "Chantilly"}, {"abbr": "VA", "state": "Virginia", "name": "George Herbert Wotka", "city": "Falls Church"}, {"abbr": "CT", "state": "Connecticut", "name": "Joseph Ralph Luberti", "city": "Woodbridge"}, {"abbr": "DE", "state": "Delaware", "name": "Quinn Joseph Naughter", "city": "Wilmington"}, {"abbr": "IN", "state": "Indiana", "name": "Charlie Douglas Biggs", "city": "Fort Wayne"}, {"abbr": "MI", "state": "Michigan", "name": "Nicholas Christopher Gabrys", "city": "Detroit"}, {"abbr": "OH", "state": "Ohio", "name": "Luke Anthony Brinck", "city": "Cincinnati"}, {"abbr": "OR", "state": "Oregon", "name": "Jaxen Scott Mazur", "city": "Eugene"}, {"abbr": "WI", "state": "Wisconsin", "name": "Jackson Vick Speed", "city": "Milwaukee"}];
 var byState={};
 for(var i=0;i<PEOPLE.length;i++){
   var p=PEOPLE[i];
   if(!byState[p.abbr])byState[p.abbr]={state:p.state,people:[]};
   byState[p.abbr].people.push(p);
 }
-var stateKeys=Object.keys(byState);
+var stateKeys=Object.keys(byState).sort(function(a,b){var ca=byState[a].people.length, cb=byState[b].people.length; if(cb!==ca)return cb-ca;
+if((a==="TN"&&b==="NJ"))return -1;
+if((a==="NJ"&&b==="TN"))return 1;
+return byState[a].state.localeCompare(byState[b].state);});
 
 function el(id){return document.getElementById(id);}
 function norm(s){return String(s).trim().replace(/\s+/g," ").toLowerCase();}
@@ -225,8 +228,95 @@ el("recallInput").onkeydown=function(e){
   if(e.keyCode===13)checkRecall();
 };
 
+
+function sampleUnique(arr,n){
+  var a=arr.slice();
+  for(var i=a.length-1;i>0;i--){
+    var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t;
+  }
+  return a.slice(0,Math.min(n,a.length));
+}
+function uniqueValues(values){
+  var seen={},out=[];
+  for(var i=0;i<values.length;i++){
+    var k=String(values[i]);
+    if(!seen[k]){seen[k]=true;out.push(values[i]);}
+  }
+  return out;
+}
+function shuffled(arr){return sampleUnique(arr,arr.length);}
+
+var mcStateCurrent=null, mcCityCurrent=null;
+
+function renderMcState(){
+  mcStateCurrent=PEOPLE[Math.floor(Math.random()*PEOPLE.length)];
+  el("mcStateName").innerHTML=safe(mcStateCurrent.name);
+  el("mcStateFeedback").innerHTML="";
+  var allStates=uniqueValues(PEOPLE.map(function(p){return p.state;}));
+  var distractors=allStates.filter(function(s){return s!==mcStateCurrent.state;});
+  distractors=sampleUnique(distractors,3);
+  var choices=shuffled([mcStateCurrent.state].concat(distractors));
+  var box=el("mcStateChoices"); box.innerHTML="";
+  for(var i=0;i<choices.length;i++){
+    var b=document.createElement("button");
+    b.type="button"; b.className="mcchoice"; b.innerHTML=safe(choices[i]);
+    b.setAttribute("data-choice",choices[i]);
+    b.onclick=function(){
+      var selected=this.getAttribute("data-choice");
+      var btns=box.getElementsByTagName("button");
+      for(var j=0;j<btns.length;j++){
+        btns[j].disabled=true;
+        if(btns[j].getAttribute("data-choice")===mcStateCurrent.state)btns[j].className="mcchoice correct";
+      }
+      if(selected===mcStateCurrent.state){
+        el("mcStateFeedback").innerHTML='<div class="feedback ok">Correct — '+safe(mcStateCurrent.city)+', '+safe(mcStateCurrent.state)+'.</div>';
+      }else{
+        this.className="mcchoice wrong";
+        el("mcStateFeedback").innerHTML='<div class="feedback bad">Incorrect. '+safe(mcStateCurrent.name)+' is from '+safe(mcStateCurrent.city)+', '+safe(mcStateCurrent.state)+'.</div>';
+      }
+    };
+    box.appendChild(b);
+  }
+}
+
+function renderMcCity(){
+  mcCityCurrent=PEOPLE[Math.floor(Math.random()*PEOPLE.length)];
+  el("mcCityName").innerHTML=safe(mcCityCurrent.name);
+  el("mcCityFeedback").innerHTML="";
+  var allCities=uniqueValues(PEOPLE.map(function(p){return p.city;}));
+  var distractors=allCities.filter(function(c){return c!==mcCityCurrent.city;});
+  distractors=sampleUnique(distractors,3);
+  var choices=shuffled([mcCityCurrent.city].concat(distractors));
+  var box=el("mcCityChoices"); box.innerHTML="";
+  for(var i=0;i<choices.length;i++){
+    var b=document.createElement("button");
+    b.type="button"; b.className="mcchoice"; b.innerHTML=safe(choices[i]);
+    b.setAttribute("data-choice",choices[i]);
+    b.onclick=function(){
+      var selected=this.getAttribute("data-choice");
+      var btns=box.getElementsByTagName("button");
+      for(var j=0;j<btns.length;j++){
+        btns[j].disabled=true;
+        if(btns[j].getAttribute("data-choice")===mcCityCurrent.city)btns[j].className="mcchoice correct";
+      }
+      if(selected===mcCityCurrent.city){
+        el("mcCityFeedback").innerHTML='<div class="feedback ok">Correct — '+safe(mcCityCurrent.city)+', '+safe(mcCityCurrent.state)+'.</div>';
+      }else{
+        this.className="mcchoice wrong";
+        el("mcCityFeedback").innerHTML='<div class="feedback bad">Incorrect. '+safe(mcCityCurrent.name)+' is from '+safe(mcCityCurrent.city)+', '+safe(mcCityCurrent.state)+'.</div>';
+      }
+    };
+    box.appendChild(b);
+  }
+}
+el("mcStateNext").onclick=renderMcState;
+el("mcCityNext").onclick=renderMcCity;
+renderMcState();
+renderMcCity();
+
+
 var ref="";
-stateKeys.sort(function(a,b){return byState[a].state.localeCompare(byState[b].state);});
+
 for(var r=0;r<stateKeys.length;r++){
   var ab=stateKeys[r],s=byState[ab];
   ref+="<h3>"+safe(s.state)+" ("+ab+") — "+s.people.length+"</h3>";
